@@ -25,7 +25,9 @@ export default App
 ```
 
 说明:
+
 1.value: 类型为boolean
+
 2.toggle: 方法传递的参数类型为boolean
 
 #### useState传递泛型参数
@@ -73,8 +75,11 @@ export default App
 ```
 
 说明:
+
 1.限制useState函数参数的初始值必须满足类型为: User | ( ) => User
+
 2.限制setUser函数的参数必须满足类型为: User | ( ) => User | undefined
+
 3.user状态数据具备User类型相关的类型提示
 
 
@@ -95,7 +100,9 @@ return <>{user?.name}</>
 ```
 
 说明:
+
 1.限制useState函数参数的初始值可以是User | null
+
 2.限制setUser函数的参数类型可以是User | null
 
 
@@ -248,3 +255,30 @@ function App() {
 
 export default App
 ```
+
+### Axios与TypeScript
+
+> axios是基于Promise的HTTP客户端，可以用来处理HTTP请求，本身提供了类型定义文件，可以直接使用, 并且对于 TypeScript 是类型友好的
+
+场景: `axios`提供了`request`泛型方法，方便我们传入类型参数推导出接口返回值的类型
+
+```tsx
+axios.request<Type>(requestConfig).then(res => {
+    // res.data 的类型为 Type
+    console.log(res.data)
+})
+```
+
+说明: 泛型参数 `Type` 的类型决定 `res.data` 的类型
+
+### 前后端联调与TypeScript
+
+步骤:
+
+1.根据接口文档创建一个通用的泛型接口类型(多个接口返回值的结构是相似的)
+
+2.根据接口文档创建特有的接口数据类型（每个接口有自己特殊的数据格式)
+
+3.组合1和2的类型，得到最终传给request泛型的参数类型
+
+![](./src/assets/axios.png)
