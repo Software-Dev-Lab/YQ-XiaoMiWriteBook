@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@icon-park/react':
+        specifier: ^1.4.2
+        version: 1.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       antd-mobile:
         specifier: ^5.37.1
         version: 5.37.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -352,6 +355,13 @@ packages:
   '@humanwhocodes/retry@0.3.0':
     resolution: {integrity: sha512-d2CGZR2o7fS6sWB7DG/3a95bGKQyHMACZ5aW8qGkkqQpUoZV6C0X7Pc7l4ZNMZkfNBf4VWNe9E1jRsf0G146Ew==}
     engines: {node: '>=18.18'}
+
+  '@icon-park/react@1.4.2':
+    resolution: {integrity: sha512-+MtQLjNiRuia3fC/NfpSCTIy5KH5b+NkMB9zYd7p3R4aAIK61AjK0OSraaICJdkKooU9jpzk8m0fY4g9A3JqhQ==}
+    engines: {node: '>= 8.0.0', npm: '>= 5.0.0'}
+    peerDependencies:
+      react: '>=16.9'
+      react-dom: '>=16.9'
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1824,6 +1834,11 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/retry@0.3.0': {}
+
+  '@icon-park/react@1.4.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   '@isaacs/cliui@8.0.2':
     dependencies:

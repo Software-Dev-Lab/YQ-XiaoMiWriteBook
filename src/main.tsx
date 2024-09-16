@@ -1,10 +1,9 @@
-import "./index.css"
+import "./index.css" // Tailwind CSS
+import '@icon-park/react/styles/index.css' // IconPark CSS
+
 import ReactDOM from 'react-dom/client'
 
-// 导入 RouterProvider
-import { RouterProvider } from 'react-router-dom'
-// 导入 router 实例
-import { router } from './router'
+import { RouterProvider } from 'react-router-dom' // 导入 RouterProvider
+import { router } from './router' // 导入 router 实例
 
-// ！表示是做了一个非空断言, 就是告诉编译器这个变量肯定有值, 否则会报错
-ReactDOM.createRoot(document.getElementById('root')!).render(<RouterProvider router={router} />)
+ReactDOM.createRoot(document.getElementById('root')!).render(<RouterProvider router={router} />) // ！表示是做了一个非空断言, 就是告诉编译器这个变量肯定有值, 否则会报错
