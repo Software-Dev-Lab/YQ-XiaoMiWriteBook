@@ -1,5 +1,6 @@
 import "./index.css" // Tailwind CSS
 import '@icon-park/react/styles/index.css' // IconPark CSS
+import './assets/common.css' // 统一公共样式及变量
 
 import ReactDOM from 'react-dom/client'
 
