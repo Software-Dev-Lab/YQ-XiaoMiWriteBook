@@ -1,4 +1,5 @@
 import { useState, useRef, TouchEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Home = () => {
     const [showSearch, setShowSearch] = useState(false)
@@ -6,7 +7,7 @@ const Home = () => {
 
     const handleTouchStart = (event: TouchEvent<HTMLDivElement>) => {
         startTouchY.current = event.touches[0].clientY // 记录触摸起始位置
-    };
+    }
 
     const handleTouchMove = (event: TouchEvent<HTMLDivElement>) => {
         const currentTouchY = event.touches[0].clientY // 当前触摸Y坐标
@@ -19,11 +20,13 @@ const Home = () => {
         }
     }
 
+    const navigate = useNavigate()
+
     return (
         <div
             className="p-5 flex flex-col h-screen relative"
         >
-            <div className="create-button flex items-center justify-center absolute bottom-10 right-10 rounded-full w-[60px] h-[60px] bg-gray-200 text-[30px] text-white leading-[60px] bg-yellow-400">+</div>
+            <div className="create-button flex items-center justify-center absolute bottom-10 right-10 rounded-full w-[60px] h-[60px] bg-gray-200 text-[35px] text-white leading-[60px] bg-yellow-400 font-bold" onClick={() => navigate('/create')}>+</div>
             <header className="flex justify-end w-full">
                 <iconpark-icon name="shezhi" width="30" height="30"></iconpark-icon>
             </header>
@@ -41,7 +44,7 @@ const Home = () => {
                     <input
                         type="text"
                         placeholder="搜索随笔..."
-                        className="border border-gray-300 rounded-lg p-2 w-full outline-none"
+                        className="border border-gray-300 rounded-full bg-gray-200 p-2 px-4 w-full outline-none"
                     />
                 </div>
 
