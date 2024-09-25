@@ -1,3 +1,3 @@
 export interface TestInterface {
-  testMethod(arg: string): void;
+    testMethod(arg: string): void;
 }
