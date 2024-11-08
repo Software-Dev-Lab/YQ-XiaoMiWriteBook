@@ -1,4 +1,3 @@
-import ''
 const App = () => {
     return <></>
 }

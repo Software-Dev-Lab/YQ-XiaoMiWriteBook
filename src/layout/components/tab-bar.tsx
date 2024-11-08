@@ -8,8 +8,6 @@
 import { AppOutline, UnorderedListOutline } from 'antd-mobile-icons'
 import { TabBar as AntdTabBar } from 'antd-mobile'
 
-
-
 const TabBar = () => {
     const tabs = [
         {
