@@ -26,7 +26,9 @@ const Home = () => {
         <div
             className="p-5 flex flex-col h-screen relative"
         >
-            <div className="create-button flex items-center justify-center absolute bottom-10 right-10 rounded-full w-[60px] h-[60px] bg-gray-200 text-[35px] text-white leading-[60px] bg-yellow-400 font-bold" onClick={() => navigate('/create')}>+</div>
+            <div className="create-button flex items-center justify-center absolute bottom-10 right-10 rounded-full w-[60px] h-[60px] text-[30px] text-white leading-[60px] bg-yellow-400" onClick={() => navigate('/create')}>
+                <iconpark-icon name="jiahao-b"></iconpark-icon>
+            </div>
             <header className="flex justify-end w-full">
                 <iconpark-icon name="shezhi" width="30" height="30"></iconpark-icon>
             </header>
